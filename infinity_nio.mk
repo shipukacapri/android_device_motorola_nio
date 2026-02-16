@@ -1,33 +1,15 @@
-# Copyright (C) 2025 Project InfinityX
-# Device configuration for Motorola nio (Moto G100)
-# Infinity-X product file that inherits Lineage/AOSP base product config.
+#
+# Copyright (C) 2022 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
-# Inherit base product definitions (architecture, base packages, telephony).
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from device (device specific BoardConfig and device.mk)
+# Inherit from nio device
 $(call inherit-product, device/motorola/nio/device.mk)
 
-# Inherit vendor blobs and vendor product definitions
-$(call inherit-product, vendor/motorola/nio/nio-vendor.mk)
-
-# Optional Infinity vendor/product additions (if present)
-$(call inherit-product-if-exists, vendor/infinity/config/common_full_phone.mk)
-
-#
-# Device identifier. Must come after inclusions above.
-#
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := infinity_nio
 PRODUCT_DEVICE := nio
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G100
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := XT2125-4
 
-INFINITY_MAINTAINER := Shipu
-
-
-# GMS client id base (if required / used by base)
-PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
-# Build fingerprint and build props (override as needed)
+# Build info
