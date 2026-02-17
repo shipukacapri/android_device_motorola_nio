@@ -10,7 +10,7 @@ $(call inherit-product, device/motorola/nio/device.mk)
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := infinity_nio
 PRODUCT_DEVICE := nio
-PRODUCT_MODEL := XT2125-4
+PRODUCT_MODEL := Moto G100
 
 # Infinity Flags
 INFINITY_MAINTAINER := Shipu
