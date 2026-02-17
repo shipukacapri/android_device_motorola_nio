@@ -12,4 +12,5 @@ PRODUCT_NAME := infinity_nio
 PRODUCT_DEVICE := nio
 PRODUCT_MODEL := XT2125-4
 
-# Build info
+# Infinity Flags
+INFINITY_MAINTAINER := Shipu
