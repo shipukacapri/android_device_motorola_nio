@@ -7,10 +7,27 @@
 # Inherit from nio device
 $(call inherit-product, device/motorola/nio/device.mk)
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+TARGET_SUPPORTS_OMX_SERVICE := false
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_nio
+
+PRODUCT_BRAND := motorola
+PRODUCT_MANUFACTURER := motorola
+PRODUCT_NAME := custom_nio
 PRODUCT_DEVICE := nio
 PRODUCT_MODEL := XT2125-4
+
+BOARD_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
