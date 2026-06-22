@@ -7,6 +7,9 @@
 # Inherit from sm8250-common
 $(call inherit-product, device/motorola/sm8250-common/common.mk)
 
+# Overlay Voltage Maintainer
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-voltage
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
